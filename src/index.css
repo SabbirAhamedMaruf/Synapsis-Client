@@ -1,0 +1,14 @@
+.chakra-textarea {
+  border: 1px solid #ebebeb !important;
+  border-radius: 6px !important  ;
+}
+.chakra-textarea:hover {
+  border: 1px solid #bebebe !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.chakra-textarea:focus {
+  border: 1px solid #bebebe !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
