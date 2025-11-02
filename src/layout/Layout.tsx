@@ -5,17 +5,23 @@ import { Outlet } from "react-router-dom";
 import { useCallback, useState } from "react";
 
 const Layout = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(
+    JSON.parse(localStorage?.getItem("synapsis_collapsed_state") ?? "false") ||
+      false
+  );
+
   const onToggle = useCallback(() => {
-    setIsCollapsed((prev) => !prev);
-  }, []);
+    const currentState = !isCollapsed;
+    setIsCollapsed(currentState);
+    localStorage.setItem("synapsis_collapsed_state", String(currentState));
+  }, [isCollapsed]);
 
   return (
     <Flex h={"100vh"} w={"100%"}>
       <Sidebar isCollapsed={isCollapsed} />
       <Flex flexDir={"column"} flex={1}>
         <Topbar isCollapsed={isCollapsed} onToggle={onToggle} />
-        <Box flex={1}>
+        <Box flex={1} p={3} background={"#EBEBEB"}>
           <Outlet />
         </Box>
       </Flex>

@@ -3,7 +3,7 @@ import Layout from "../layout/Layout";
 import Error from "../pages/error/Error";
 import Chat from "../pages/chat/Chat";
 import Settings from "../pages/settings/Settings";
-import Models from "../pages/models/Models";
+import ModelsList from "../pages/models/ModelsList";
 
 export const synapsisRoutes = createBrowserRouter([
   {
@@ -17,7 +17,7 @@ export const synapsisRoutes = createBrowserRouter([
       },
       {
         path: "/models",
-        element: <Models />,
+        element: <ModelsList />,
       },
       {
         path: "/settings",

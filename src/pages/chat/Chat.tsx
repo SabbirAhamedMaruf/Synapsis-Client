@@ -12,6 +12,11 @@ import { MdSync } from "react-icons/md";
 import { spin360 } from "../../assets/animation";
 
 const Chat = () => {
+  // const {
+  //   isOpen: isModelChangerOpen,
+  //   onOpen: onModelChangerOpen,
+  //   onClose: onModelChangerClose,
+  // } = useDisclosure();
   return (
     <Flex
       flexDir={"column"}
@@ -24,8 +29,8 @@ const Chat = () => {
           Welcome Back Sabbir Ahamed Maruf
         </Text>
         <Text color={"#374144"} fontSize={14}>
-          Hello and welcome! I’m here to assist you with your project or
-          questions. What would you like to start with?
+          I’m here to assist you with your project or questions. What would you
+          like to start with?
         </Text>
       </Box>
       <Box w={"4xl"} id="synapsis_chat_area" mt={6} mb={2}>
@@ -40,12 +45,15 @@ const Chat = () => {
             ChatGPT 4.1
           </Text>
           <Tooltip
+            // isDisabled={isModelChangerOpen}
             label="Change model"
             placement="right"
             hasArrow
             openDelay={1000}
+            zIndex={9999}
           >
             <IconButton
+              // onClick={() => onModelChangerOpen()}
               _hover={{
                 animation: `${spin360} 0.6s linear`,
               }}

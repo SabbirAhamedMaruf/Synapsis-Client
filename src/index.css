@@ -1,13 +1,38 @@
-.chakra-textarea {
-  border: 1px solid #ebebeb !important;
-  border-radius: 6px !important  ;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --primary-color:"#374144",
+  --font-hoverd-color:"#00070B",
+  --app-font-family: "Inter", sans-serif;
 }
+
+body {
+  font-family: var(--app-font-family);
+}
+/* general */
+.chakra-input,
+.chakra-textarea {
+  color: var(--primary-color);
+  font-family: var(--app-font-family) !important;
+  font-size: 14px !important;
+  line-height: 100%;
+  border: 1px solid #ebebeb !important;
+  border-radius: 6px !important;
+}
+.chakra-input:hover,
 .chakra-textarea:hover {
+  color: var(--font-hoverd-color) !important;
+  font-size: 14px;
+  line-height: 100%;
   border: 1px solid #bebebe !important;
   outline: none !important;
   box-shadow: none !important;
 }
+.chakra-input:focus,
 .chakra-textarea:focus {
+  color: var(--font-hoverd-color) !important;
+  font-size: 14px;
+  line-height: 100%;
   border: 1px solid #bebebe !important;
   outline: none !important;
   box-shadow: none !important;

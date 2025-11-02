@@ -5,10 +5,10 @@ import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
 const Topbar = ({ isCollapsed, onToggle }: topbarPropsTypes) => {
   return (
     <Flex
-      minH={12}
       justifyContent={"space-between"}
       alignItems={"center"}
       px={2}
+      py={2}
       borderBottom={"1.5px solid #EBEBEB"}
     >
       <IconButton
